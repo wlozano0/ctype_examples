@@ -48,6 +48,11 @@ DLLIMP int f70(int a1, int *a2, int a3, int *a4)
 	int v15; // [sp+10h] [bp-4h]@1
 	int a2a; // [sp+1Ch] [bp+8h]@1
 
+	//printf("a1 %d\n", a1);
+	//printf("*a2 %d\n", *a2);
+	//printf("a3 %d\n", a3);
+	//printf("*a4 %d\n", *a4);
+
 	v4 = a2;
 	v5 = a1;
 	v6 = 0;
