@@ -9,6 +9,22 @@ DLLIMP int * f1(int *a1){
    return a1;
 }
 
+
+struct struct1{
+    int a[3];
+    int b[3];
+};
+
+DLLIMP struct struct1 * f2(struct struct1 *s1){
+    //printf("s1->a[0] %d\n", s1->a[0]);
+    //printf("s1->b[0] %d\n", s1->b[0]);
+
+    s1->a[0] = s1->a[0] + 1;
+    s1->b[0] = s1->b[0] + 10;
+
+    return s1;
+}
+
 //------------------------------------------
 // f70 will takes a1, a2, a3, and produce a4
 // a1: some constant
