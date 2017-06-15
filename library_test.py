@@ -12,6 +12,7 @@ f1_params = (1, "a1", 0)
 f1_c = f1_proto(("f1", hllDll))
 
 def f1_test():
+    print '=' * 40
     print 'Test f1'
     a1 = (c_int*3)()
     a1[0] = 1
@@ -22,7 +23,7 @@ def f1_test():
 
     f1_c(pointer(a1))
 
-    print 'After: ', a1[0], a1[1], a1[2]
+    print 'After: ', a1[0], a1[1], a1[2], '\n'
 
 f2_proto = CFUNCTYPE(c_void_p)
 f2_params = (1, "s1", 0)
@@ -32,6 +33,7 @@ class struct1(Structure):
     _fields_ = [("a", c_int*3), ("b", c_int*3)]
 
 def f2_test():
+    print '=' * 40
     print 'Test f2'
     a = (c_int*3)()
     b = (c_int*3)()
@@ -47,7 +49,7 @@ def f2_test():
 
     f2_c(pointer(s1))
 
-    print 'After: ',  s1.a[0], s1.b[0]
+    print 'After: ',  s1.a[0], s1.b[0], '\n'
 
 f70_proto = CFUNCTYPE(c_int)
 #f70_params = (1, "s1", 0)
@@ -61,6 +63,8 @@ def convertToC(a1):
     return a2
 
 def f70_test():
+    print '=' * 40
+    print 'Test f70'
     a1 = c_int(116)
     a3 = c_int(2)
     a4 = (c_int*116)()
@@ -69,7 +73,7 @@ def f70_test():
 
     res = f70_c(a1, pointer(a2), a3, pointer(a4))
 
-    print 'Result: ', res
+    print 'Result: ', res, '\n'
 
 f1_test()
 
